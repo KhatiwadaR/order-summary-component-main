@@ -1,0 +1,129 @@
+:root {
+    --blue-100: hsl(225, 100%, 94%);
+    --blue-700: hsl(245, 75%, 52%);
+    --blue-700-hover: hsla(245, 75%, 52%, 0.7);
+    --blue-700a: hsla(245, 75%, 52%, 0.2);
+    --blue-50: hsl(225, 100%, 98%);
+    --gray-600: hsl(224, 23%, 55%);
+    --blue-950: hsl(223, 47%, 23%);
+}       
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    color: var(--blue-950);
+    background-color: var(--blue-100);
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+}
+
+.card__image{
+    width: 100%;
+    overflow: hidden;
+}
+.card__image img {
+    width: 100%;
+    height: auto;
+}
+
+.card__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card__content h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.card__content p {
+    font-size: 0.8rem;
+    color: var(--gray-600);
+    text-align: center;
+}
+
+.plan-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--blue-50);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.plan-info h2 {
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+.plan-info a {
+    font-size: 0.8rem;
+    color: var(--blue-700);
+    font-weight: 700;
+    margin-left: auto;
+}
+
+.proceed {
+    background-color: var(--blue-700);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px var(--blue-700a);
+}
+
+.cancel {
+    background-color: transparent;
+    border: none;
+    color: var(--gray-600);
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) and (hover: hover) {
+    body {
+        background-image: url(./images/pattern-background-desktop.svg);
+    }
+    .plan-info a:hover {
+        text-decoration: none;
+        color: var(--blue-700-hover);
+    }
+    .proceed:hover {
+        background-color: var(--blue-700-hover);
+    }
+
+    .cancel:hover {
+        color: var(--blue-950);
+    }
+}
